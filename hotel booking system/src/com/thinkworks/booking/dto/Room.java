@@ -3,14 +3,14 @@ package com.thinkworks.booking.dto;
 public class Room {
 
     private int roomNumber;
-    private RoomTypeAndPrice roomTypeAndPrice;
+    private RoomType roomType;
     private boolean isAvailable;
     private int numberOfNightStays;
 
-    public Room(int roomNumber, RoomTypeAndPrice roomTypeAndPrice, int numberOfNightStays, boolean isAvailable) {
+    public Room(int roomNumber, RoomType roomType, int numberOfNightStays, boolean isAvailable) {
         this.roomNumber = roomNumber;
-        this.roomTypeAndPrice = roomTypeAndPrice;
-        this.isAvailable = isAvailable;
+        this.roomType = roomType;
+        this.isAvailable = true;
         this.numberOfNightStays = numberOfNightStays;
     }
 
@@ -22,12 +22,12 @@ public class Room {
         this.roomNumber = roomNumber;
     }
 
-    public RoomTypeAndPrice getRoomTypeAndPrice() {
-        return roomTypeAndPrice;
+    public RoomType getRoomType() {
+        return roomType;
     }
 
-    public void setRoomTypeAndPrice(RoomTypeAndPrice roomTypeAndPrice) {
-        this.roomTypeAndPrice = roomTypeAndPrice;
+    public void setRoomTypeAndPrice(RoomType roomTypeAndPrice) {
+        this.roomType = roomType;
     }
 
     public int getNumberOfNightStays() {

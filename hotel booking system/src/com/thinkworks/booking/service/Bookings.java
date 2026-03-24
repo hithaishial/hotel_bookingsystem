@@ -4,7 +4,6 @@ import com.thinkworks.booking.dto.Room;
 
 public class Bookings {
 
-    private static double totalPrice = 0;
 
     public void printRoomDetails(Room room){
 
@@ -16,29 +15,43 @@ public class Bookings {
 
     public void printGuestDetails(Guest guest){
 
+        System.out.println("Booking ID: " + guest.getBookingId());
         System.out.println("Name of the guest: " + guest.getGuestName());
         System.out.println("Phone number: " + guest.getGuestPhoneNumber());
         System.out.println("Email: " + guest.getGuestEmail());
-    }
+        System.out.println("No.of Rooms booked: " + guest.getNumberOfRooms());
+   }
 
     public void displayAvailableRoomList(Room[] rooms){
 
         if (rooms != null){
             for (Room room: rooms){
                 if (room.isAvailable()){
-                    System.out.println(room.getRoomTypeAndPrice());
+                    room.setAvailable(false);
+                    System.out.println("room is already booked");
                 }
             }
         }
     }
 
-    public double calculateTotalPrice(Room[] rooms){
+    public double calculateTotalPrice(Guest guest){
 
+        Room[] rooms = guest.getRooms();
         double totalPrice = 0;
         for (Room room: rooms){
 
-            totalPrice = totalPrice + (room.getRoomTypeAndPrice().getPrice()*room.getNumberOfNightStays());
+            totalPrice = totalPrice + (room.getRoomType()*room.getNumberOfNightStays());
         }
         return totalPrice;
+    }
+
+    public void booking(Guest guest){
+
+        if (guest != null){
+                //if (.isAvailable()){
+                   // System.out.println(room.getRoomTypeAndPrice());
+                }
+            }
+        }
     }
 }
