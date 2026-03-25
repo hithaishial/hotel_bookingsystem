@@ -8,8 +8,8 @@ public class Bookings {
     public void printRoomDetails(Room room){
 
         System.out.println("Room Number: " + room.getRoomNumber());
-        System.out.println("Room type: " + room.getRoomTypeAndPrice());
-        System.out.println("Price for the selected room type for one night stay: " + room.getRoomTypeAndPrice().getPrice());
+        System.out.println("Room type: " + room.getRoomType());
+        System.out.println("Price for the selected room type for one night stay: " + room.getRoomType());
         System.out.println("Room availability: " + room.isAvailable());
     }
 
@@ -40,7 +40,7 @@ public class Bookings {
         double totalPrice = 0;
         for (Room room: rooms){
 
-            totalPrice = totalPrice + (room.getRoomType()*room.getNumberOfNightStays());
+            //totalPrice = totalPrice + (room.getRoomType()*room.getNumberOfNightStays());
         }
         return totalPrice;
     }
