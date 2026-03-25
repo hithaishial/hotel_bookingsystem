@@ -50,8 +50,8 @@ public class Bookings {
         if (guest != null){
                 //if (.isAvailable()){
                    // System.out.println(room.getRoomTypeAndPrice());
-                }
+
             }
-        }
+
     }
 }
