@@ -14,6 +14,9 @@ public class Room {
         this.numberOfNightStays = numberOfNightStays;
     }
 
+    {
+        System.out.println("Welcome to Hotel");
+    }
     public int getRoomNumber() {
         return roomNumber;
     }
